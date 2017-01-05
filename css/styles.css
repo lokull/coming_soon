@@ -493,16 +493,11 @@ p {
       transition: .125 all ease-in-out; }
 
 footer {
-  position: absolute;
-  background: #fff;
-  bottom: 0px;
-  left: 0px;
-  padding: 0 36px;
-  width: 100%; }
+  width: 100%;
+  margin: 60px 0 16px 0; }
 
 footer ul {
-  padding: 0;
-  margin: 0 0 16px 0; }
+  padding: 0; }
   footer ul li {
     display: inline-block;
     text-align: center;
