@@ -486,6 +486,7 @@ p {
     border-radius: 4px;
     background: #f2f2f2;
     width: 100%;
+    box-shadow: none 0;
     transition: .125s all ease-in-out; }
     #mc_embed_signup input.email:active, #mc_embed_signup input.email:focus {
       background: #fff;
