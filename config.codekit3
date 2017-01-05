@@ -57,11 +57,11 @@
 		"oAP": "\/favicon.ico",
 		"oF": 0
 		},
-	"\/img\/hero@2x.png": {
-		"ft": 32768,
-		"iS": 6161698,
+	"\/img\/hero@2x.jpg": {
+		"ft": 16384,
+		"iS": 284579,
 		"oA": 0,
-		"oAP": "\/img\/hero@2x.png",
+		"oAP": "\/img\/hero@2x.jpg",
 		"oF": 0,
 		"opt": 1
 		},
