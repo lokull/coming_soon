@@ -51,6 +51,12 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/favicon.ico": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/favicon.ico",
+		"oF": 0
+		},
 	"\/img\/hero@2x.png": {
 		"ft": 32768,
 		"iS": 6161698,
