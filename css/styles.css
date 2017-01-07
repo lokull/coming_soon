@@ -429,7 +429,8 @@ p {
 
 .hero {
   padding: 36px;
-  background: url("../img/hero@2x.jpg") no-repeat center;
+  background: url("../img/hero2@2x.jpg") no-repeat center;
+  opacity: .85;
   background-size: cover;
   width: 59%;
   height: 100vh;
