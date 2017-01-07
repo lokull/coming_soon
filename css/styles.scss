@@ -1,4 +1,5 @@
 @import "normalize";
+$primary-font: 'Source Sans Pro', sans-serif;
 $brand-color: #41D4D9;
 $mine: #333;
 
@@ -8,6 +9,7 @@ $mine: #333;
 
 html, body {
 	height: 100%;
+  font-family: $primary-font;
 }
 
 h1,h2,p {
@@ -15,11 +17,12 @@ h1,h2,p {
 }
 
 h1 {
-  font-size: 42px;
+  font-size: 64px;
+  font-weight: 400;
 }
 
 p {
-  font-size: 20px;
+  font-size: 22px;
   line-height: 1.4;
 }
 
@@ -72,11 +75,17 @@ p {
       background: blue;
     }
   }
+  .link {
+    display: block;
+    color: $brand-color;
+  }
 }
 
 //MAILCHIMP
 #mc_embed_signup {
   // background: #fff;
+  font-family: $primary-font;
+  font-size: 20px;
   clear: left;
   // font: 14px Helvetica,Arial,sans-serif;
   input.button {
@@ -122,7 +131,7 @@ footer ul {
     display: inline-block;
     text-align: center;
     margin: 4px 8px 4px 0;
-    font-size: 12px;
+    font-size: 16px;
     a {
       text-decoration: none;
       display: block;
@@ -136,6 +145,9 @@ footer ul {
   body {
     // background: red;
   }
+  h1 {
+    font-size: 42px;
+  }
   .hero, .content {
     width: 50%;
   }
@@ -148,8 +160,8 @@ footer ul {
   body {
     // background: yellow;
   }
-  h1 { font-size: 32px;}
-  p { font-size: 17px;}
+  h1 { font-size: 52px;}
+  p { font-size: 18px;}
   .hero {
     width: 100%;
     height: 150px;
@@ -166,5 +178,139 @@ footer ul {
     display: block;
     height: 16px;
     width: 100%;
+  }
+}
+
+
+// Roating headline
+.cd-title {
+  position: relative;
+  height: 160px;
+  line-height: 230px;
+  text-align: center;
+}
+.cd-words-wrapper {
+  display: inline-block;
+  position: relative;
+  text-align: left;
+}
+.cd-words-wrapper b {
+  display: inline-block;
+  position: absolute;
+  white-space: nowrap;
+  left: 0;
+  top: 0;
+}
+.cd-words-wrapper b.is-visible {
+  position: relative;
+}
+.no-js .cd-words-wrapper b {
+  opacity: 0;
+}
+.no-js .cd-words-wrapper b.is-visible {
+  opacity: 1;
+}
+.cd-headline.type .cd-words-wrapper {
+  vertical-align: top;
+  overflow: hidden;
+}
+.cd-headline.type .cd-words-wrapper::after {
+  /* vertical bar */
+  content:'';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 90%;
+  width: 2px;
+  background-color: $mine;
+}
+.cd-headline.type .cd-words-wrapper.waiting::after {
+  -webkit-animation: cd-pulse 1s infinite;
+  -moz-animation: cd-pulse 1s infinite;
+  animation: cd-pulse 1s infinite;
+}
+.cd-headline.type .cd-words-wrapper.selected {
+  background-color: #aebcb9;
+}
+.cd-headline.type .cd-words-wrapper.selected::after {
+  visibility: hidden;
+}
+.cd-headline.type .cd-words-wrapper.selected b {
+  color: $mine;
+}
+.cd-headline.type b {
+  visibility: hidden;
+}
+.cd-headline.type b.is-visible {
+  visibility: visible;
+}
+.cd-headline.type i {
+  position: absolute;
+  visibility: hidden;
+  font-style: normal;
+}
+.cd-headline.type i.in {
+  position: relative;
+  visibility: visible;
+}
+
+@-webkit-keyframes cd-pulse {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+}
+@-moz-keyframes cd-pulse {
+  0% {
+    -moz-transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    -moz-transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: translateY(-50%) scale(0);
+    opacity: 0;
+  }
+}
+@keyframes cd-pulse {
+  0% {
+    -webkit-transform: translateY(-50%) scale(1);
+    -moz-transform: translateY(-50%) scale(1);
+    -ms-transform: translateY(-50%) scale(1);
+    -o-transform: translateY(-50%) scale(1);
+    transform: translateY(-50%) scale(1);
+    opacity: 1;
+  }
+  40% {
+    -webkit-transform: translateY(-50%) scale(0.9);
+    -moz-transform: translateY(-50%) scale(0.9);
+    -ms-transform: translateY(-50%) scale(0.9);
+    -o-transform: translateY(-50%) scale(0.9);
+    transform: translateY(-50%) scale(0.9);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(-50%) scale(0);
+    -moz-transform: translateY(-50%) scale(0);
+    -ms-transform: translateY(-50%) scale(0);
+    -o-transform: translateY(-50%) scale(0);
+    transform: translateY(-50%) scale(0);
+    opacity: 0;
   }
 }
